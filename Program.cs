@@ -71,6 +71,40 @@ namespace Lab2 {
             Console.WriteLine(account2.GetHistory());
 
 
+            StandartAccount account3 = new StandartAccount(user1);
+
+            account3.WinGame(factory.CreateTrainingGame("Training Game 1"), user1, user2); // training game
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            account3.LoseGame(factory.CreateTrainingGame("Training Game 2"), user1, user2);
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            account3.WinGame(factory.CreateStandartGame("Standart Game 1", 20), user1, user2); //standart game
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            account3.LoseGame(factory.CreateStandartGame("Standart Game 2", 20), user1, user2);
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            account3.WinGame(factory.CreateDoubleGame("Double Game 1", 20), user1, user2); // double game
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            account3.LoseGame(factory.CreateDoubleGame("Double Game 2", 20), user1, user2);
+            Console.Write("The rating of {0} is ", user1);
+            Console.WriteLine(account3.CurrentRating);
+
+            Console.WriteLine(account3.GetHistory());
+
+
+
+
+
+
+
         }
 
     }

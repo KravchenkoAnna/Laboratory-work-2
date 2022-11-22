@@ -23,7 +23,7 @@ namespace Lab2
 
                 return currentRating;
             }
-            set { }
+            
 
         }
 
@@ -58,12 +58,11 @@ namespace Lab2
             var report = new StringBuilder();
             int currentRating = 0;
             int gamesCounter = 0;
-            report.AppendLine("Name\t\tGoal\tCurrent Rating\tNumber of games");
+            report.AppendLine("Name\t\tGoal\tCurrent Rating");
             foreach (var item in allGames)
             {
-                currentRating += item.Rating;
-                gamesCounter += item.Counter;
-                report.AppendLine($"{item.NameOfGame}\t{item.Rating}\t{currentRating}\t\t{gamesCounter}");
+                currentRating += item.Rating;               
+                report.AppendLine($"{item.NameOfGame}\t{item.Rating}\t{currentRating}");
             }
             return report.ToString();
         }

@@ -8,9 +8,9 @@ namespace Lab2
 {
     class StandartGame : BasicGame
     {
-        public StandartGame(string nameOfGame, int rating) : base(nameOfGame,rating)
+        public StandartGame(string nameOfGame, int rating) : base(nameOfGame)
         {
-            
+            base.Rating = rating;
         }
         public override int ForRating()
         {

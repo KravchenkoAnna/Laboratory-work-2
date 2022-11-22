@@ -10,7 +10,7 @@ namespace Lab2
     {
         public TrainingGame(string nameOfGame) : base(nameOfGame)
         {
-
+            base.Rating = 1;
         }
         public override int ForRating()
         {

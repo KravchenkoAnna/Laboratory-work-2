@@ -13,31 +13,10 @@ namespace Lab2
         public string Number { get; }
 
         private static int id = 123;
-
-        public int Counter
+     
+        public BasicGame(string nameOfGame) 
         {
-            get
-            {
-                int counter = 0;
-                counter++;
-                return counter;
-            }
-
-
-        }
-        public BasicGame(string nameOfGame, int rating) // конструктор для StandartGame
-        {
-            NameOfGame = nameOfGame;
-            Rating = rating;
-            Number = id.ToString();
-            id++;
-
-        }
-
-        public BasicGame(string nameOfGame) // конструктор для TrainingGame
-        {
-            NameOfGame = nameOfGame;
-            this.Rating = 1;
+            NameOfGame = nameOfGame;            
             Number = id.ToString();
             id++;
 
